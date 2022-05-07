@@ -121,5 +121,12 @@ const calcDisplaySummary = function (movements) {
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes} PLN`;
+
+  const out = movements.filter(mov => mov < 0).reduce((acc,mov)=> acc + mov, 0);
+  labelSumOut.textContent = `${out};`
+
+  const interest = movements
+  .filter(mov => mov > 0)
+  .map(deposit => ) // do dokończenia
 };
 calcDisplaySummary(account4.movements);
